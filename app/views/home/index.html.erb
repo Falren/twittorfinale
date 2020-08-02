@@ -1,0 +1,7 @@
+<h1>Welcome Back!</h1>
+
+<% unless current_user %>
+  <%= link_to 'Sign up', new_user_registration_path %> | <%= link_to 'Log in', new_user_session_path %>
+<% else %>
+  <%= link to 'Browse', posts_path %>
+<% end %>
