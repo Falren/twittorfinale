@@ -5,21 +5,10 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
-  end
-
-  # GET /posts/1
-  # GET /posts/1.json
-  def show
-  end
-
-  # GET /posts/new
-  def new
+    @comment = Comment.new
     @post = Post.new
-  end
-
-  # GET /posts/1/edit
-  def edit
+    @posts = Post.all
+    @comments = @post.comments
   end
 
   # POST /posts
@@ -53,7 +42,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to user_path(@post.user), notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
