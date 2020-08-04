@@ -5,9 +5,9 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @comment = Comment.new
-    @post = Post.new
     @posts = Post.all
+    @post = Post.new
+    @comment = Comment.new
     @comments = @post.comments
   end
 
@@ -23,6 +23,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+    @comment = Comment.new
+    @comments = @post.comments
+  end
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update

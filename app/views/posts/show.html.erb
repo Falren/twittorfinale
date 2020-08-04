@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <strong>User:</strong>
-  <%= @post.user_id %>
+  <%= @post.user.email %>
+
+  <%= @post.comments_count %>
 </p>
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', request.referer %>
+<strong>Comments:</strong>
+<ul>
+  <%= render @post.comments, comment: @comment %><br>
+</ul>
