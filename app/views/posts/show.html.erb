@@ -2,10 +2,9 @@
 <p>
   <strong>User:</strong>
   <%= @post.user.email %>
-
-  <%= @post.comments_count %>
 </p>
 <strong>Comments:</strong>
+<%= @post.comments_count %>
 <ul>
   <%= render @post.comments, comment: @comment %><br>
 </ul>
