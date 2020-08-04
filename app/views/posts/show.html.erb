@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>User:</strong>
+  <%= @post.user.email %>
+
+  <%= @post.comments_count %>
+</p>
+<strong>Comments:</strong>
+<ul>
+  <%= render @post.comments, comment: @comment %><br>
+</ul>
