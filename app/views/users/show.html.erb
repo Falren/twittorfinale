@@ -1,10 +1,15 @@
-<p><%= @user.email %></p>
+<p id='top'><%= @user.email %></p>
 <p><%= link_to 'Main page', root_path %></p>
-<h1>What's up</h1>
-<%= render 'posts/form' %>
+
+<%= render 'follow_form', user: @user, friendship: @friendship %>
+
+<% if current_user == @user.id %>
+  <h1>What's up</h1>
+  <%= render 'posts/form' %>
+<% end %>
 
 <h1>Shit posts</h1>
 <ul>
   <%= render @posts %>
-</ul
-<%= link_to 'Go up', user_path(@user)%>
+</ul>
+<a href='#top'>Go up<a>
