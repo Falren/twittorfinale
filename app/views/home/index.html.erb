@@ -1,18 +1,18 @@
 <h1>Twittor Finale</h1>
 <body style="overflow:hidden;">
-<% unless current_user %>
-  <div>
-    <%= link_to 'Sign up', new_user_registration_path %> | <%= link_to 'Log in', new_user_session_path %>
-  </div>
-<% else %>
-  <div>
-    <p class='homepage'><%= link_to 'My profile', user_path(current_user)%> | <%= link_to 'Browse', posts_path %></p>
-  </div>
-<% end %>
+  <% unless current_user %>
+    <div>
+      <%= link_to 'Sign up', new_user_registration_path %> | <%= link_to 'Log in', new_user_session_path %>
+    </div>
+  <% else %>
+    <div>
+      <p class='homepage'><%= link_to 'My profile', user_path(current_user)%> | <%= link_to 'Browse', posts_path %></p>
+    </div>
+  <% end %>
 
-<%= image_tag 'ricardoflex.gif', size: '1980x600' %>
+  <%= image_tag 'ricardoflex.gif', size: '1980x600' %>
 
-<div class='footer'>
-  <p class='homepage'><%= link_to 'About', home_about_path %> | <%= link_to 'Contacts', home_contacts_path %></p>
-</div>
+  <div class='footer'>
+    <p class='homepage'><%= link_to 'About', home_about_path %> | <%= link_to 'Contacts', home_contacts_path %></p>
+  </div>
 </body>
