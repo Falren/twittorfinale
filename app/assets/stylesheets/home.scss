@@ -1,3 +1,32 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2em;
+  text-align: center;
+  line-height: 2em;
+  color: black;
+}
+
+.homepage {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5em;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  width: 100%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
