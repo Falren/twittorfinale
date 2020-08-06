@@ -6,5 +6,6 @@ class UsersController < ApplicationController
     @comment = Comment.new
     @posts = @user.posts
     @comments = @user.comments
+    @friendship = current_user.active_friendships.find_by(followed_id: @user.id)
   end
 end

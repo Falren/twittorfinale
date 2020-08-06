@@ -1,0 +1,5 @@
+<% if friendship %>
+  <%= render 'unfollow', user: user, friendship: friendship  %>
+<% else %>
+  <%= render 'follow', user: user, friendship: friendship %>
+<% end %>
